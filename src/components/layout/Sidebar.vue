@@ -1,9 +1,10 @@
 <template>
     <aside class="w-64 h-screen bg-card text-base border-r border-gray-200 dark:border-gray-700">
         <!-- Logo & primary -->
-        <div class="flex items-center gap-2 p-4 border-b border-gray-200 dark:border-gray-700">
-            <img src="@/assets/vue.svg" alt="Logo" class="h-6 w-6" />
-            <h1 class="text-lg font-bold text-primary">HUREN</h1>
+        <div class="flex items-center gap-2 px-5 py-8 border-b border-gray-200 dark:border-gray-700">
+            <a href="/">
+                <img src="https://i.ibb.co.com/Myb5NvGB/Logo.png" alt="Logo" />
+            </a>
         </div>
 
         <!-- Navigation Links -->
