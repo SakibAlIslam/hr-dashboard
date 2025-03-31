@@ -18,6 +18,9 @@
   .text-brand {
     color: var(--color-brand);
   }
+  .sidebar-shadow {
+    box-shadow: 0px 2px 4px 0px #5F5F5F40;
+  }
 }
 
 :root {
@@ -40,7 +43,7 @@
 
 .dark {
   --color-primary: #B1D950;
-  --color-secondary: #70747B;
+  --color-secondary: #ececec;
   --color-site: #282828;
   --color-card: #393C43;
   --color-base: #282828;

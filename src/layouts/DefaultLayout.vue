@@ -1,10 +1,11 @@
 <template>
     <div class="flex bg-site min-h-screen text-base">
       <!-- Sidebar -->
-      <Sidebar />
+      <Sidebar class="desktop-sidebar hidden md:block"/>
+      <SidebarMobile class="mobile-sidebar block md:hidden"/>
   
       <!-- Main content -->
-      <div class="flex-1 ml-64 p-6">
+      <div class="flex-1 ml-10 p-6">
         <!-- Top bar -->
         <div class="flex justify-between items-center mb-6">
           <h1 class="text-2xl font-bold">Page Title</h1>
@@ -26,6 +27,7 @@
   
   <script setup lang="ts">
   import Sidebar from '@/components/layout/Sidebar.vue'
+import SidebarMobile from '@/components/layout/SidebarMobile.vue';
   import { useThemeStore } from '@/stores/theme'
   
   // 🟢 Store instance
