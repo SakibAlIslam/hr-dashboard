@@ -1,6 +1,17 @@
+<script setup lang="ts">
+import OverviewHeader from '@/components/ui/OverviewHeader.vue';
+import StatCard from '@/components/ui/StatCard.vue';
+
+</script>
+
 <template>
-    <div class="bg-card p-6 rounded shadow">
-        <h2 class="text-xl font-semibold text-base">Welcome to Dashboard</h2>
-        <p class="text-sm text-gray-600 mt-2">This is the starting content.</p>
+    <OverviewHeader
+        title="Open Hiring"
+        subtitle="Overview of your company’s various hirings"
+    />
+    <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
+        <StatCard title="Total Applied" :count="920" percentage="+2.68%" />
+        <StatCard title="Total Invitation" :count="54" percentage="+4.87%" />
+        <StatCard title="Total Hiring" :count="84" percentage="+9.12%" />
     </div>
 </template>

@@ -2,21 +2,15 @@
 import { useRoute } from 'vue-router'
 import { useThemeStore } from '@/stores/theme'
 import { useSidebarToggle } from '@/composables/useSidebarToggle'
+import { menu } from '@/constants/menu'
+import { useAttrs, defineOptions } from 'vue'
+
+defineOptions({ inheritAttrs: false })
+const attrs = useAttrs()
 
 const route = useRoute()
 const theme = useThemeStore()
 const { isOpen } = useSidebarToggle()
-
-const menu = [
-    { label: 'Home', path: '/' },
-    { label: 'Team', path: '/team' },
-    { label: 'Hire & Onboard', path: '/hire-and-onboard' },
-    { label: 'Payroll', path: '/payroll' },
-    { label: 'Time Tracking', path: '/time-tracking' },
-    { label: 'Benefits', path: '/benefits' },
-    { label: 'Notification', path: '/notifications' },
-    { label: 'Settings', path: '/settings' },
-]
 </script>
 
 <template>
@@ -31,6 +25,7 @@ const menu = [
 
     <!-- Sidebar Drawer -->
     <aside
+    v-bind="attrs"
         class="fixed top-0 left-0 z-50 max-w-xs h-screen bg-card text-base sidebar-shadow transform transition-transform duration-300 md:hidden"
         :class="{ '-translate-x-full': !isOpen, 'translate-x-0': isOpen }">
         <!-- Logo -->

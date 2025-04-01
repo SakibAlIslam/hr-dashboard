@@ -2,7 +2,7 @@ import { ref, watchEffect } from 'vue'
 
 const isDark = ref(false)
 
-export function useDarkMode() {
+export const useDarkMode = () => {
     const toggleDark = () => {
         isDark.value = !isDark.value
     }
