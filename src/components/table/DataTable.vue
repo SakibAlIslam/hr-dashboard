@@ -8,18 +8,14 @@ const store = useEmployeeStore()
 </script>
 
 <template>
-  <div class="my-8 bg-white dark:bg-base p-4 rounded-xl shadow-sm overflow-auto">
+  <div class="bg-white dark:bg-base p-4 rounded-xl shadow-sm overflow-auto">
     <!-- Table -->
     <table class="w-full text-left">
       <thead>
         <DataTableHeader />
       </thead>
       <tbody>
-        <DataTableRow
-          v-for="employee in store.allEmployees"
-          :key="employee.id"
-          :employee="employee"
-        />
+        <DataTableRow v-for="employee in store.filteredEmployees" :key="employee.id" :employee="employee" />
       </tbody>
     </table>
   </div>
