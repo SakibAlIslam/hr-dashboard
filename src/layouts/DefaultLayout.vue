@@ -10,7 +10,7 @@
       <Topbar class="hidden md:flex" />
 
       <!-- Page Content -->
-      <div class="page-content p-8">
+      <div class="page-content sm:p-8 p-3">
         <RouterView />
       </div>
     </div>

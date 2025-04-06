@@ -12,7 +12,7 @@ defineProps<{
   <img
     :src="`https://flagcdn.com/w${size || 20}/${code.toLowerCase()}.png`"
     :alt="alt || code"
-    :class="[`rounded object-cover`, `w-[${size || 20}px] h-auto`]"
+    :class="[`rounded object-cover`, `w-[${size || 20}px] h-[${size || 20}px]`]"
     loading="lazy"
   />
 </template>

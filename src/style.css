@@ -21,6 +21,10 @@
   .sidebar-shadow {
     box-shadow: 0px 2px 4px 0px #5F5F5F40;
   }
+
+  .max-w-table {
+    max-width: calc(100vw - 56px);
+  }
 }
 
 :root {

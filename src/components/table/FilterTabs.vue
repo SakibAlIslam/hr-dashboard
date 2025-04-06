@@ -2,8 +2,8 @@
 import { computed } from 'vue'
 import { useEmployeeStore } from '@/stores/employee'
 
-const tabs: { label: string; value: 'all' | 'New Hire' | 'Draft' }[] = [
-  { label: 'All', value: 'all' },
+const tabs: { label: string; value: 'All' | 'New Hire' | 'Draft' }[] = [
+  { label: 'All', value: 'All' },
   { label: 'New Hire', value: 'New Hire' },
   { label: 'Draft', value: 'Draft' },
 ]
@@ -16,11 +16,11 @@ const selected = computed({
 </script>
 
 <template>
-    <div class="flex gap-2 bg-base dark:bg-base p-2 rounded-xl border border-gray-200 dark:border-gray-700">
+    <div class="flex flex-1 gap-2 bg-site p-1.5 rounded-xl">
         <button v-for="tab in tabs" :key="tab.value" class="px-4 py-1.5 rounded-lg text-sm font-medium transition-all cursor-pointer"
             :class="selected === tab.value
-                ? 'bg-primary text-black shadow'
-                : 'bg-white dark:bg-base text-secondary border border-gray-300 dark:border-gray-600'"
+                ? 'bg-white text-highlight dark:text-site'
+                : 'bg-transparent text-secondary'"
             @click="selected = tab.value">
             {{ tab.label }}
         </button>

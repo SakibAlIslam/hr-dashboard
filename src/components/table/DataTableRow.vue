@@ -56,7 +56,7 @@ const store = useEmployeeStore()
 
     <!-- License Usage -->
     <td class="px-4 py-3 text-sm text-secondary">
-      <div class="flex flex-col gap-1">
+      <div class="flex items-center gap-2">
         <ProgressBar
           :value="employee.licenseUsed"
           :max="employee.licenseTotal"

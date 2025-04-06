@@ -7,13 +7,11 @@ defineProps<OverviewHeaderProps>()
 
 <template>
     <div class="flex items-start justify-between w-full mb-5">
-        <!-- Left: Title & Subtitle -->
         <div>
             <h2 class="text-xl font-semibold text-highlight">{{ title }}</h2>
             <p class="text-sm text-secondary">{{ subtitle }}</p>
         </div>
 
-        <!-- Right: Export Button -->
-        <Button label="Export Report" variant="primary" size="md"></Button>
+        <Button label="Export Report" variant="primary" size="md" icon="export"></Button>
     </div>
 </template>

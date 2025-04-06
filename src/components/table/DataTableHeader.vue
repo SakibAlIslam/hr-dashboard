@@ -6,12 +6,12 @@ import Checkbox from '@/components/ui/Checkbox.vue'
 const store = useEmployeeStore()
 
 const isAllSelected = computed(() => {
-    return store.allEmployees.length > 0 && store.selectedIds.length === store.allEmployees.length
+    return store.employees.length > 0 && store.selectedIds.length === store.employees.length
 })
 
 const toggleAll = (value: boolean) => {
     if (value) {
-        store.selectedIds = store.allEmployees.map((emp) => emp.id)
+        store.selectedIds = store.employees.map((emp) => emp.id)
     } else {
         store.clearSelection()
     }
@@ -19,8 +19,7 @@ const toggleAll = (value: boolean) => {
 </script>
 
 <template>
-    <tr class="bg-gray-100 dark:bg-gray-800 text-left text-sm font-medium text-gray-600 dark:text-gray-300">
-        <!-- Checkbox column -->
+    <tr class="bg-transparent text-left text-sm font-medium text-highlight border border-[#EEEEEF] dark:border-[#2A2A2E] rounded-lg">
         <th class="px-4 py-3">
             <Checkbox :model-value="isAllSelected" @update:model-value="toggleAll" />
         </th>

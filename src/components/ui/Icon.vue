@@ -13,7 +13,7 @@ const sizeClass = {
 </script>
 
 <template>
-  <svg :class="['fill-current', sizeClass[size || 'md']]" aria-hidden="true">
+  <svg :class="['fill-current', sizeClass[size || 'md'], classes]" aria-hidden="true">
     <use :xlink:href="`#icon-${name}`" />
   </svg>
 

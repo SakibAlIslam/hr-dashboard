@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { computed, useSlots } from 'vue'
+import Icon from '@/components/ui/Icon.vue'
 import type { ButtonProps } from '@/types/button'
 
 defineOptions({ name: 'Button' })
@@ -27,7 +28,7 @@ const sizeClass = computed(() => {
     case 'lg':
       return 'text-base px-5 py-3'
     default:
-      return 'text-sm px-4 py-2'
+      return 'text-sm px-4 py-3'
   }
 })
 </script>
@@ -38,10 +39,17 @@ const sizeClass = computed(() => {
     :class="[variantClass, sizeClass, { 'w-10 h-10 p-0': hasIconOnly }]"
     v-bind="$attrs"
   >
+    <!-- If icon prop exists -->
+    <Icon v-if="props.icon" :name="props.icon" size="md" />
+
+    <!-- Named slot -->
     <slot name="icon" />
+
     <span v-if="label">
       {{ label }}
     </span>
+
+    <!-- Default slot -->
     <slot />
   </button>
 </template>
