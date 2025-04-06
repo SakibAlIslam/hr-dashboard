@@ -1,15 +1,15 @@
 export interface Employee {
-    id: string
+    id: number
     name: string
-    employeeId: string
+    employmentId: string
     avatar: string
     type: string
-    country: string
-    flag: string
-    usage: {
-        current: number
-        total: number
-        color: string
+    country: {
+        name: string
+        flag: string
     }
+    licenseUsed: number
+    licenseTotal: number
+    licenseColor: string
     status: 'Draft' | 'New Hire'
 }

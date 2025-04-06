@@ -3,45 +3,72 @@ import { useEmployeeStore } from '@/stores/employee'
 import Checkbox from '@/components/ui/Checkbox.vue'
 import StatusBadge from '@/components/table/StatusBadge.vue'
 import ProgressBar from '@/components/ui/ProgressBar.vue'
+import FlagIcon from '@/components/ui/FlagIcon.vue'
 import type { Employee } from '@/types/employee'
+import CopyIcon from '../ui/CopyIcon.vue'
 
 const props = defineProps<{ employee: Employee }>()
 const store = useEmployeeStore()
 </script>
 
 <template>
-    <tr class="border-b border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800">
-        <!-- Checkbox -->
-        <td class="px-4 py-3">
-            <Checkbox :model-value="store.selectedIds.includes(props.employee.id)"
-                @update:model-value="() => store.toggleSelection(props.employee.id)" />
-        </td>
+  <tr class="hover:bg-gray-50 dark:hover:bg-gray-800 transition duration-200 cursor-pointer">
+    <!-- Checkbox -->
+    <td class="px-4 py-3">
+      <Checkbox
+        :model-value="store.selectedIds.includes(employee.id)"
+        @update:model-value="() => store.toggleSelection(employee.id)"
+      />
+    </td>
 
-        <!-- Employee Info -->
-        <td class="px-4 py-3 whitespace-nowrap">
-            <div class="flex items-center gap-3">
-                <img :src="employee.avatar" class="w-8 h-8 rounded-full object-cover" />
-                <div>
-                    <p class="font-medium">{{ employee.name }}</p>
-                    <p class="text-xs text-gray-500 dark:text-gray-400">ID: {{ employee.employeeId }}</p>
-                </div>
-            </div>
-        </td>
+    <!-- Employee Name -->
+    <td class="px-4 py-3 whitespace-nowrap">
+      <div class="flex items-center gap-3">
+        <img :src="employee.avatar" class="w-8 h-8 rounded-full object-cover" />
+        <div>
+          <p class="font-medium text-secondary">{{ employee.name }}</p>
+        </div>
+      </div>
+    </td>
 
-        <!-- Type -->
-        <td class="px-4 py-3 text-sm">{{ employee.type }}</td>
+    <!-- Employee ID -->
+    <td class="px-4 py-3">
+      <div class="flex items-center gap-3">
+        <div class="flex items-center gap-3">
+          <p class="text-xs text-secondary">{{ employee.employmentId }}</p>
+          <CopyIcon :text="employee.employmentId" />
+        </div>
+      </div>
+    </td>
 
-        <!-- Country -->
-        <td class="px-4 py-3 text-sm">{{ employee.flag }} {{ employee.country }}</td>
+    <!-- Type -->
+    <td class="px-4 py-3 text-sm text-secondary">
+      {{ employee.type }}
+    </td>
 
-        <!-- Progress -->
-        <td class="px-4 py-3">
-            <ProgressBar :value="employee.usage.current" :max="employee.usage.total" :color="employee.usage.color" />
-        </td>
+    <!-- Country -->
+    <td class="px-4 py-3 text-sm text-secondary">
+      <div class="flex items-center gap-2">
+        <FlagIcon :code="employee.country.flag" />
+        <span>{{ employee.country.name }}</span>
+      </div>
+    </td>
 
-        <!-- Status -->
-        <td class="px-4 py-3">
-            <StatusBadge :status="employee.status" />
-        </td>
-    </tr>
+    <!-- License Usage -->
+    <td class="px-4 py-3 text-sm text-secondary">
+      <div class="flex flex-col gap-1">
+        <ProgressBar
+          :value="employee.licenseUsed"
+          :max="employee.licenseTotal"
+          :color="employee.licenseColor"
+        />
+        <span class="text-xs">{{ employee.licenseUsed }}/{{ employee.licenseTotal }}</span>
+      </div>
+    </td>
+
+    <!-- Status -->
+    <td class="px-4 py-3">
+      <StatusBadge :status="employee.status" />
+    </td>
+  </tr>
 </template>

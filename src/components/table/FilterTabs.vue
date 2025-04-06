@@ -17,7 +17,7 @@ const selected = computed({
 
 <template>
     <div class="flex gap-2 bg-base dark:bg-base p-2 rounded-xl border border-gray-200 dark:border-gray-700">
-        <button v-for="tab in tabs" :key="tab.value" class="px-4 py-1.5 rounded-lg text-sm font-medium transition-all"
+        <button v-for="tab in tabs" :key="tab.value" class="px-4 py-1.5 rounded-lg text-sm font-medium transition-all cursor-pointer"
             :class="selected === tab.value
                 ? 'bg-primary text-black shadow'
                 : 'bg-white dark:bg-base text-secondary border border-gray-300 dark:border-gray-600'"

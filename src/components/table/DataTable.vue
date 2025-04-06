@@ -1,4 +1,3 @@
-<!-- src/components/table/DataTable.vue -->
 <script setup lang="ts">
 import { useEmployeeStore } from '@/stores/employee'
 import DataTableHeader from './DataTableHeader.vue';
@@ -8,7 +7,7 @@ const store = useEmployeeStore()
 </script>
 
 <template>
-  <div class="bg-white dark:bg-base p-4 rounded-xl shadow-sm overflow-auto">
+  <div class="p-4 overflow-auto">
     <!-- Table -->
     <table class="w-full text-left">
       <thead>

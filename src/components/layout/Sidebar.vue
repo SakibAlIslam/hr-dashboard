@@ -1,5 +1,5 @@
 <template>
-    <aside class="w-64 h-screen bg-card text-base sidebar-shadow">
+    <aside class="w-64 bg-card text-base sidebar-shadow">
         <!-- Logo & primary -->
         <div class="flex items-center gap-2 px-5 py-8">
             <a href="/">

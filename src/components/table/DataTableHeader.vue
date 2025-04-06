@@ -25,7 +25,8 @@ const toggleAll = (value: boolean) => {
             <Checkbox :model-value="isAllSelected" @update:model-value="toggleAll" />
         </th>
         <th class="px-4 py-3">Name</th>
-        <th class="px-4 py-3">Type</th>
+        <th class="px-4 py-3">Employment ID</th>
+        <th class="px-4 py-3">Type of hire</th>
         <th class="px-4 py-3">Country</th>
         <th class="px-4 py-3">License Used</th>
         <th class="px-4 py-3">Status</th>
