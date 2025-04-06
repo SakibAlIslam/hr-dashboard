@@ -7,7 +7,7 @@ import FlagIcon from '@/components/ui/FlagIcon.vue'
 import type { Employee } from '@/types/employee'
 import CopyIcon from '../ui/CopyIcon.vue'
 
-const props = defineProps<{ employee: Employee }>()
+defineProps<{ employee: Employee }>()
 const store = useEmployeeStore()
 </script>
 
