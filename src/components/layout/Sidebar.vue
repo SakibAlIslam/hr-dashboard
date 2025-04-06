@@ -1,9 +1,9 @@
 <template>
     <aside class="w-64 bg-card text-base sidebar-shadow">
-        <!-- Logo & primary -->
+        <!-- Logo -->
         <div class="flex items-center gap-2 px-5 py-8">
             <a href="/">
-                <img :src="theme.isDark ? 'https://i.ibb.co.com/Myb5NvGB/Logo.png' : 'https://i.ibb.co.com/Myb5NvGB/Logo.png'" alt="Logo" />
+                <img :src="theme.isDark ? 'https://i.ibb.co.com/ch0stXTv/Logo.png' : 'https://i.ibb.co.com/Myb5NvGB/Logo.png'" alt="Logo" />
             </a>
         </div>
 

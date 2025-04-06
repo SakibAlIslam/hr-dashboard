@@ -16,9 +16,9 @@ const isChecked = computed({
 </script>
 
 <template>
-    <label class="inline-flex items-center">
+    <label class="inline-flex items-center rounded-sm">
         <input type="checkbox"
-            class="form-checkbox w-5 h-5 rounded-sm border-gray-300 text-primary focus:ring-primary disabled:cursor-not-allowed cursor-pointer"
+            class="form-checkbox w-4.5 h-4.5 rounded-sm text-primary disabled:cursor-not-allowed cursor-pointer"
             :disabled="props.disabled" v-model="isChecked" />
     </label>
 </template>

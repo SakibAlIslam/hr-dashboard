@@ -8,6 +8,7 @@
     <div class="main-content flex-1">
       <!-- Top bar -->
       <Topbar class="hidden md:flex" />
+      <TopbarMobile class="md:hidden" />
 
       <!-- Page Content -->
       <div class="page-content sm:p-8 p-3">
@@ -21,4 +22,5 @@
 import Sidebar from '@/components/layout/Sidebar.vue'
 import SidebarMobile from '@/components/layout/SidebarMobile.vue';
 import Topbar from '@/components/layout/Topbar.vue';
+import TopbarMobile from '@/components/layout/TopbarMobile.vue';
 </script>

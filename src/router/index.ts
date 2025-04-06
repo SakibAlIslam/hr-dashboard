@@ -2,11 +2,8 @@ import NotFound from '@/pages/NotFound.vue'
 import type { RouteRecordRaw } from 'vue-router'
 import { createRouter, createWebHistory } from 'vue-router'
 
-// Lazy-loaded layouts
 const DefaultLayout = () => import('@/layouts/DefaultLayout.vue')
-// const AuthLayout = () => import('@/layouts/AuthLayout.vue')
 
-// Lazy-loaded pages
 const Dashboard = () => import('@/pages/dashboard/index.vue')
 
 const routes: RouteRecordRaw[] = [
@@ -17,6 +14,11 @@ const routes: RouteRecordRaw[] = [
       {
         path: '',
         name: 'Dashboard',
+        component: Dashboard,
+      },
+      {
+        path: 'hire-and-onboard',
+        name: 'hire-and-onboard',
         component: Dashboard,
       }
     ],

@@ -27,7 +27,7 @@ const toggleAll = (value: boolean) => {
         <th class="px-4 py-3">Employment ID</th>
         <th class="px-4 py-3">Type of hire</th>
         <th class="px-4 py-3">Country</th>
-        <th class="px-4 py-3">License Used</th>
+        <th class="px-4 py-3">License Use</th>
         <th class="px-4 py-3">Status</th>
     </tr>
 </template>

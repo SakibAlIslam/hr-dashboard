@@ -8,7 +8,6 @@ const { icon, title, count, percentage } = props
 
 <template>
     <div class="bg-card rounded-xl p-6 border border-[#eeeeee] w-full">
-        <!-- Top Section: Icon + Title + Options -->
         <div class="flex items-start justify-between">
             <div class="flex items-center gap-3">
                 <Icon :name="icon" classes="w-15 h-15" />

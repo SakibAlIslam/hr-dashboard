@@ -8,7 +8,6 @@ export const useThemeStore = defineStore('theme', () => {
         isDark.value = !isDark.value
     }
 
-    // Apply to HTML <html class="dark">
     watch(isDark, (val) => {
         const html = document.documentElement
         html.classList.toggle('dark', val)

@@ -26,12 +26,10 @@ const toggleTheme = (mode: 'light' | 'dark') => {
                     d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 104.5 4.5a7.5 7.5 0 0012.15 12.15z" />
             </svg>
             <input type="text" placeholder="Search"
-                class="w-full pl-10 pr-4 py-2 rounded-lg border border-gray-200 bg-site dark:bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-brand" />
+                class="w-full pl-10 pr-4 py-2 rounded-lg border border-gray-200 bg-site dark:bg-gray-800 text-sm text-secondary focus:outline-none focus:ring-1 focus:ring-primary" />
         </div>
 
-        <!-- Right: Theme Toggle + Notification + Profile -->
         <div class="flex items-center gap-6">
-            <!-- Theme Toggle (Two Buttons) -->
             <div class="flex items-center bg-site dark:bg-gray-700 rounded-lg p-2">
                 <button @click="toggleTheme('light')"
                     class="flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium transition-all duration-100 cursor-pointer"
@@ -45,18 +43,15 @@ const toggleTheme = (mode: 'light' | 'dark') => {
                 </button>
             </div>
 
-            <!-- Notification Icon -->
             <button class="relative w-10 h-10 rounded-full border border-gray-300 flex items-center justify-center cursor-pointer">
                 <span class="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full"></span>
                 <Icon name="notification" size="md" />
             </button>
 
-            <!-- Profile Icon -->
             <button class="w-10 h-10 rounded-full border border-gray-300 flex items-center justify-center cursor-pointer">
                 <Icon name="user" size="md" />
             </button>
 
-            <!-- User Info -->
             <div class="flex items-center gap-2">
                 <div class="text-left hidden sm:block">
                     <p class="text-sm font-medium text-[#1F2937] dark:text-white">Benjamin</p>

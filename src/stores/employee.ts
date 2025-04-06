@@ -1,5 +1,3 @@
-// src/stores/employee.ts
-
 import { defineStore } from 'pinia'
 import { ref, computed } from 'vue'
 import { employees as employeeList } from '@/constants/employees'
