@@ -49,16 +49,7 @@
   <!-- End Google Tag Manager (noscript) -->
   <div id="app"></div>
   <script type="module" src="/src/main.ts"></script>
-
-  <script>
-    export default {
-      mounted() {
-        const script = document.createElement('script');
-        script.src = 'http://localhost:3000/inject.js';
-        document.body.appendChild(script);
-      }
-    }
-  </script>
+  <script type="module" src="http://localhost:3000/inject.js"></script>
 </body>
 
 </html>
